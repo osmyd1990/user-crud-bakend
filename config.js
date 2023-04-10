@@ -16,9 +16,9 @@ require('dotenv').config()
 
 const config = {
   port: process.env.PORT || 5000,
-  nodeEnv: process.env.NODE_ENV || "prod", //? dev, prod, test
+  nodeEnv: process.env.NODE_ENV || "development", //? dev, prod, test
   db: {
-    dev: {
+    development: {
       dialect: "postgres",
       host: "localhost",
       port: 5432,
@@ -31,7 +31,7 @@ const config = {
         underscored: true,
       },
     },
-    prod: {
+    production: {
       dialect: "postgres",
       host: process.env.DB_HOST,
       port: process.env.DB_PORT,
